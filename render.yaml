@@ -1,0 +1,22 @@
+databases:
+  - name: mysitedb
+    plan: free
+    databaseName: mysite
+    user: mysite
+
+services:
+  - type: web
+    plan: free
+    name: mysite
+    runtime: python
+    buildCommand: "./build.sh"
+    startCommand: "python -m gunicorn my_site.asgi:application -k uvicorn.workers.UvicornWorker"
+    envVars:
+      - key: SECRET_KEY
+        generateValue: true
+      - key: WEB_CONCURRENCY
+        value: 4
+      - key: IS_DEVELOPMENT
+        value: "false"
+      - key: APP_HOST
+        value: "django-blog-nr4l.onrender.com"

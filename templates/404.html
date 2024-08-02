@@ -1,0 +1,14 @@
+{% extends "main.html" %}
+{% load static %}
+
+{% block title %}We didn't find this page!{% endblock title %}
+
+{% block css_style %}
+    <link rel='stylesheet' href='{% static "404.css" %}'>
+{% endblock css_style %}
+
+{% block content %}
+    <h1>We're sorry!</h1>
+
+    <p>We couldn't find that page you are looking for!</p>
+{% endblock content %}
