@@ -1,4 +1,5 @@
 .env
 __pycache__
 temp
+staticfiles
 source_code.zip
