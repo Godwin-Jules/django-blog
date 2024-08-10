@@ -4,8 +4,10 @@ colorama==0.4.6
 Django==5.1
 gunicorn==22.0.0
 h11==0.14.0
+mysqlclient==2.2.4
 packaging==24.1
 pillow==10.4.0
 sqlparse==0.5.1
 tzdata==2024.1
 uvicorn==0.30.5
+waitress==3.0.0
